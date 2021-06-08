@@ -1,3 +1,10 @@
+/* RESET: Drop the apps table */
+DROP TABLE apps;
+
+/* RESET: Drop the reviews table */
+DROP TABLE reviews;
+
+/* Create the apps table */
 CREATE TABLE apps (
 	id SERIAL PRIMARY KEY,
 	app VARCHAR NOT NULL,
@@ -9,6 +16,7 @@ CREATE TABLE apps (
 	genres VARCHAR NOT NULL
 );
 
+/* Create the reviews table */
 CREATE TABLE reviews (
 	id SERIAL PRIMARY KEY,
 	app VARCHAR NOT NULL, 
@@ -17,11 +25,8 @@ CREATE TABLE reviews (
 	sentiment_subjectivity DECIMAL NOT NULL
 );
 
+/* Check table */
 SELECT * from apps;
 
+/* Check table */
 SELECT * FROM reviews;
-
-SELECT a.app, r.sentiment, a.reviews
-FROM apps as a
-INNER JOIN reviews as r on
-a.app = r.app;
