@@ -20,3 +20,8 @@ CREATE TABLE reviews (
 SELECT * from apps;
 
 SELECT * FROM reviews;
+
+SELECT a.app, r.sentiment, a.reviews
+FROM apps as a
+INNER JOIN reviews as r on
+a.app = r.app;
