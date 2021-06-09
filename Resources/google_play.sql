@@ -22,7 +22,9 @@ CREATE TABLE reviews (
 	app VARCHAR NOT NULL, 
 	sentiment VARCHAR NOT NULL, 
 	sentiment_polarity DECIMAL NOT NULL, 
-	sentiment_subjectivity DECIMAL NOT NULL
+	sentiment_subjectivity DECIMAL NOT NULL,
+	app_id INT,
+	FOREIGN KEY (app_id) REFERENCES apps(id)
 );
 
 /* Check table */
