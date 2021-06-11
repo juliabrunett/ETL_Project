@@ -11,7 +11,7 @@ CREATE TABLE apps (
 	rating DECIMAL NOT NULL,
 	reviews INT NOT NULL,
 	installs INT NOT NULL,
-	price VARCHAR NOT NULL, 
+	price DECIMAL NOT NULL, 
 	content_rating VARCHAR NOT NULL,
 	genres VARCHAR NOT NULL
 );
